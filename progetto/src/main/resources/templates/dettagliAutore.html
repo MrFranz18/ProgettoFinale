@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css"
+ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<title>Informazioni Autore</title>
+</head>
+<body style="background-image: url(http://www.artecontadina.it/images/grafica/sfondo.jpg); background-repeat: repeat-x;">
+    <div class="container">
+    <div class="page-header">
+		<h1 style="color:black; size:40px; text-align:left;">Informazioni Autore</h1>
+	</div>
+	<div>
+    	<p th:text="'Nome: ' + ${autore.nome}" />
+    </div>
+	<div>
+    	<p th:text="'Cognome: ' + ${autore.cognome}" />
+    </div>
+	<div>
+    	<p th:text="'Nazionalit&agrave; : ' + ${autore.nazionalita}" />	
+    </div>
+	<div>
+    	<p th:text="'Data di nascita: ' + ${autore.dataNascita}" />	
+    </div>
+    	<div>
+    	<p th:text="'Data di morte: ' + ${autore.dataMorte}" />	
+    </div>
+<form>
+		<button formaction = "/listaQuadri" type = "submit" formmethod = "GET">Indietro</button>
+	</form>
+	</div>
+</body>
+</html>
